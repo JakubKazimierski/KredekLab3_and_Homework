@@ -1,0 +1,42 @@
+Zamieszczona baza danych, operuje systemem logowania do szko³y.
+Znajduj¹ siê w niej tablice:
+		-Role:
+			>Role_Id (P.Key)
+			>Role_Name 
+
+		-Worker:
+			>User_Id (P.Key)
+			>Role_Id (F.Key)
+			>Name
+			>Surname
+			>Pesel
+		
+		-Salary:
+			>Salary_Id (P.Key)
+			>Worker_Id (F.Key)
+			>Salary
+		
+		-Students:
+			>Student_Id (P.Key)
+			>Name
+			>Surname
+			>Pesel
+			>Class
+
+		-Class_Teacher:
+			>Class_Id (P.Key)
+			>Worker_Id (F.Key)
+			>Class
+		
+		-StudentsGrades:
+			>Grade_Id (P.Key)
+			>Student_Id (F.Key)
+			>Grade
+		
+		-LogIns:
+			>Log_Id (P.Key)
+			>UserPesel
+			>UserName
+			>UserPassword
+
+Zamieszczam wygenerowany skrypt bazy danych, wraz z plikami.
