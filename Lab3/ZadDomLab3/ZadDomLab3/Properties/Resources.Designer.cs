@@ -63,6 +63,16 @@ namespace ZadDomLab3.Properties {
         /// <summary>
         ///   Wyszukuje zlokalizowany zasób typu System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap herb {
+            get {
+                object obj = ResourceManager.GetObject("herb", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Wyszukuje zlokalizowany zasób typu System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap szkolaImage {
             get {
                 object obj = ResourceManager.GetObject("szkolaImage", resourceCulture);

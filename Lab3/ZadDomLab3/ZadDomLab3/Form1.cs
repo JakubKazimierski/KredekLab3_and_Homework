@@ -25,7 +25,10 @@ namespace ZadDomLab3
             SignIn sigin = new SignIn(TextBoxUserName.Text, TextBoxUserPassword.Text);
             if (sigin.SignInSchool())
             {
-               afterLogInForm.Show();
+                afterLogInForm.SetUserName(TextBoxUserName.Text);
+                afterLogInForm.SetPassword(TextBoxUserPassword.Text);
+                afterLogInForm.GetDataFromTable();
+                afterLogInForm.Show();
 
 
             }

@@ -1,10 +1,12 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Configuration;
+using System.Data;
 using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 
 namespace ZadDomLab3
 {
@@ -19,6 +21,8 @@ namespace ZadDomLab3
         public string Username { get; set; }
 
         public string Password { get; set; }
+
+        private int Pesel;
 
         /// <summary>
         /// Constructor
@@ -53,9 +57,24 @@ namespace ZadDomLab3
                 {
                     IsTrue = true;
                 }
+    
             }
 
             return IsTrue;
+        }
+
+
+
+        public void SetPesel(int number)
+        {
+            Pesel = number;
+
+        }
+
+        public int GetPesel()
+        {
+            return Pesel;
+
         }
     }
 }
