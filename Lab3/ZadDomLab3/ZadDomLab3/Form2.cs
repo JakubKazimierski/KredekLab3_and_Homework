@@ -30,13 +30,28 @@ namespace ZadDomLab3
             using (var connection = dbConnectionWareHouse())
             {
                 connection.Open();
+
+                SqlCommand comand = new SqlCommand("Select * From LogIns Where UserName ='" + GetUserName() + "'AND UserPassword='" + GetPassword() + "'", connection);
+                SqlDataReader dataReader = comand.ExecuteReader();
+                while(dataReader.Read())
+                {
+                    MessageBox.Show(dataReader.GetValue(1).ToString());
+                }
+                connection.Close();
+
+                connection.Open();
+                
+
                 using (SqlDataAdapter adapter = new SqlDataAdapter("Select * From LogIns Where UserName ='"+GetUserName()+"'AND UserPassword='"+GetPassword()+"'", connection))
                 {
                     DataTable table = new DataTable();
+                    DataSet setOfDB = new DataSet();
+
                     adapter.Fill(table);
                     GriedVieverDataBase.DataSource = table;
-                    
+
                 }
+                    
             }
         }
 
