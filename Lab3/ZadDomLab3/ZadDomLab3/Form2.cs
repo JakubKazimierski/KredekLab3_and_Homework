@@ -34,44 +34,6 @@ namespace ZadDomLab3
             {
                 connection.Open();
 
-                SqlCommand comand = new SqlCommand("Select * From LogIns INNER JOIN Worker ON Worker.Pesel = LogIns.UserPesel   Where LogIns.UserName = '"+GetUserName()+"'AND LogIns.UserPassword = '"+GetPassword()+"'", connection);
-                SqlDataReader dataReader = comand.ExecuteReader();
-                while(dataReader.Read())
-                {
-                   // MessageBox.Show(dataReader.GetValue(8).ToString());
-
-                    NumberOfWorker = Int32.Parse(dataReader.GetValue(8).ToString());
-                    NumberOfPesel = Int32.Parse(dataReader.GetValue(1).ToString());
-                }
-                connection.Close();
-
-
-                if(NumberOfWorker == 1)
-                {
-                    MessageBox.Show("Witaj Dyrektorze");
-                }
-                else if(NumberOfWorker == 2)
-                {
-                    MessageBox.Show("Witaj Nauczycielu");
-                }
-                else if (NumberOfWorker == 3)
-                {
-                    MessageBox.Show("Witaj Pracowniku Sekretariatu");
-                }
-                else if (NumberOfWorker == 4)
-                {
-                    MessageBox.Show("Witaj Mistrzu");
-                }
-                else
-                {
-
-                    MessageBox.Show("Witaj Uczniu");
-                }
-
-
-
-                /*
-                connection.Open();
                 
 
                 using (SqlDataAdapter adapter = new SqlDataAdapter("Select * From LogIns INNER JOIN Worker ON Worker.Pesel = LogIns.UserPesel   Where LogIns.UserName ='"+GetUserName()+"'AND LogIns.UserPassword='"+GetPassword()+"'", connection))
@@ -82,7 +44,7 @@ namespace ZadDomLab3
                     adapter.Fill(table);
                     GriedVieverDataBase.DataSource = table;
 
-                }*/
+                }
 
             }
         }
