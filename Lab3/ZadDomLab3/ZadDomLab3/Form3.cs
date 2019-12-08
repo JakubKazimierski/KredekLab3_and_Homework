@@ -12,43 +12,40 @@ using System.Windows.Forms;
 
 namespace ZadDomLab3
 {
-    public partial class FormForHeadTeacher : Form
+    public partial class FormForStudents : Form
     {
 
         private string username;
         private string password;
 
         private readonly Func<SqlConnection> dbConnectionWareHouse = () => new SqlConnection(ConfigurationManager.ConnectionStrings["Lab3"].ConnectionString);
-        public FormForHeadTeacher()
+
+        public FormForStudents()
         {
             InitializeComponent();
-            
-        } 
+        }
 
         public void GetDataFromTable()
         {
-
-            int NumberOfWorker = 0;
-            int NumberOfPesel = 0;
+            string Grade = "";
+           
             using (var connection = dbConnectionWareHouse())
             {
                 connection.Open();
 
-                
-
-                using (SqlDataAdapter adapter = new SqlDataAdapter("Select * From LogIns INNER JOIN Worker ON Worker.Pesel = LogIns.UserPesel   Where LogIns.UserName ='"+GetUserName()+"'AND LogIns.UserPassword='"+GetPassword()+"'", connection))
+                SqlCommand comand = new SqlCommand("Select * From LogIns INNER JOIN Student ON Student.Pesel = LogIns.UserPesel INNER JOIN Grades ON Student.StudentId = Grades.StudentId  Where LogIns.UserName = '" + GetUserName() + "'AND LogIns.UserPassword = '" + GetPassword() +"'", connection);
+                SqlDataReader dataReader = comand.ExecuteReader();
+                while (dataReader.Read())
                 {
-                    DataTable table = new DataTable();
-                    DataSet setOfDB = new DataSet();
+                    
 
-                    adapter.Fill(table);
-                    GriedVieverDataBase.DataSource = table;
-
+                    Grade = dataReader.GetValue(11).ToString();
+                   
                 }
-
+                connection.Close();
+                GradeLabelGrade.Text = Grade;
             }
         }
-
         public void SetUserName(string name)
         {
             username = name;

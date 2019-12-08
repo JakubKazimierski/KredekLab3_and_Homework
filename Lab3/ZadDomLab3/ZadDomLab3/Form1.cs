@@ -23,7 +23,8 @@ namespace ZadDomLab3
         private void ButtonLogIn_Click(object sender, EventArgs e)
         {
             
-            AfterLogInForm afterLogInForm = new AfterLogInForm();
+            FormForHeadTeacher formForHeadTeacher = new FormForHeadTeacher();
+            FormForStudents studentsForm = new FormForStudents();
 
             SignIn sigin = new SignIn(TextBoxUserName.Text, TextBoxUserPassword.Text);
             if (sigin.SignInSchool())
@@ -50,10 +51,10 @@ namespace ZadDomLab3
                     if (NumberOfWorker == 1)
                     {
                         MessageBox.Show("Witaj Dyrektorze");
-                        afterLogInForm.SetUserName(TextBoxUserName.Text);
-                        afterLogInForm.SetPassword(TextBoxUserPassword.Text);
-                        afterLogInForm.GetDataFromTable();
-                        afterLogInForm.Show();
+                        formForHeadTeacher.SetUserName(TextBoxUserName.Text);
+                        formForHeadTeacher.SetPassword(TextBoxUserPassword.Text);
+                        formForHeadTeacher.GetDataFromTable();
+                        formForHeadTeacher.Show();
                     
                     }
                     else if (NumberOfWorker == 2)
@@ -72,6 +73,10 @@ namespace ZadDomLab3
                     {
 
                         MessageBox.Show("Witaj Uczniu");
+                        studentsForm.SetUserName(TextBoxUserName.Text);
+                        studentsForm.SetPassword(TextBoxUserPassword.Text);
+                        studentsForm.GetDataFromTable();
+                        studentsForm.Show();
                     }
 
                 }

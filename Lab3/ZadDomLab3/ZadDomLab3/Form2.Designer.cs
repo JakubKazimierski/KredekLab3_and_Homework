@@ -1,6 +1,6 @@
 ﻿namespace ZadDomLab3
 {
-    partial class AfterLogInForm
+    partial class FormForHeadTeacher
     {
         /// <summary>
         /// Required designer variable.
@@ -41,13 +41,13 @@
             this.GriedVieverDataBase.Size = new System.Drawing.Size(260, 426);
             this.GriedVieverDataBase.TabIndex = 0;
             // 
-            // AfterLogInForm
+            // FormForHeadTeacher
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.GriedVieverDataBase);
-            this.Name = "AfterLogInForm";
+            this.Name = "FormForHeadTeacher";
             this.Text = "SchoolPlatform";
             ((System.ComponentModel.ISupportInitialize)(this.GriedVieverDataBase)).EndInit();
             this.ResumeLayout(false);
