@@ -27,22 +27,54 @@ namespace ZadDomLab3
 
         public void GetDataFromTable()
         {
+
+            int NumberOfWorker = 0;
+            int NumberOfPesel = 0;
             using (var connection = dbConnectionWareHouse())
             {
                 connection.Open();
 
-                SqlCommand comand = new SqlCommand("Select * From LogIns Where UserName ='" + GetUserName() + "'AND UserPassword='" + GetPassword() + "'", connection);
+                SqlCommand comand = new SqlCommand("Select * From LogIns INNER JOIN Worker ON Worker.Pesel = LogIns.UserPesel   Where LogIns.UserName = '"+GetUserName()+"'AND LogIns.UserPassword = '"+GetPassword()+"'", connection);
                 SqlDataReader dataReader = comand.ExecuteReader();
                 while(dataReader.Read())
                 {
-                    MessageBox.Show(dataReader.GetValue(1).ToString());
+                   // MessageBox.Show(dataReader.GetValue(8).ToString());
+
+                    NumberOfWorker = Int32.Parse(dataReader.GetValue(8).ToString());
+                    NumberOfPesel = Int32.Parse(dataReader.GetValue(1).ToString());
                 }
                 connection.Close();
 
+
+                if(NumberOfWorker == 1)
+                {
+                    MessageBox.Show("Witaj Dyrektorze");
+                }
+                else if(NumberOfWorker == 2)
+                {
+                    MessageBox.Show("Witaj Nauczycielu");
+                }
+                else if (NumberOfWorker == 3)
+                {
+                    MessageBox.Show("Witaj Pracowniku Sekretariatu");
+                }
+                else if (NumberOfWorker == 4)
+                {
+                    MessageBox.Show("Witaj Mistrzu");
+                }
+                else
+                {
+
+                    MessageBox.Show("Witaj Uczniu");
+                }
+
+
+
+                /*
                 connection.Open();
                 
 
-                using (SqlDataAdapter adapter = new SqlDataAdapter("Select * From LogIns Where UserName ='"+GetUserName()+"'AND UserPassword='"+GetPassword()+"'", connection))
+                using (SqlDataAdapter adapter = new SqlDataAdapter("Select * From LogIns INNER JOIN Worker ON Worker.Pesel = LogIns.UserPesel   Where LogIns.UserName ='"+GetUserName()+"'AND LogIns.UserPassword='"+GetPassword()+"'", connection))
                 {
                     DataTable table = new DataTable();
                     DataSet setOfDB = new DataSet();
@@ -50,8 +82,8 @@ namespace ZadDomLab3
                     adapter.Fill(table);
                     GriedVieverDataBase.DataSource = table;
 
-                }
-                    
+                }*/
+
             }
         }
 
