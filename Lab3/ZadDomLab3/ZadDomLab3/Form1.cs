@@ -25,6 +25,10 @@ namespace ZadDomLab3
             
             FormForHeadTeacher formForHeadTeacher = new FormForHeadTeacher();
             FormForStudents studentsForm = new FormForStudents();
+            TeacherForm teacherForm = new TeacherForm();
+            SecretariatForm secretariatForm = new SecretariatForm();
+            WoznyForm woznyForm = new WoznyForm();
+
 
             SignIn sigin = new SignIn(TextBoxUserName.Text, TextBoxUserPassword.Text);
             if (sigin.SignInSchool())
@@ -60,14 +64,27 @@ namespace ZadDomLab3
                     else if (NumberOfWorker == 2)
                     {
                         MessageBox.Show("Witaj Nauczycielu");
+                        teacherForm.SetUserName(TextBoxUserName.Text);
+                        teacherForm.SetPassword(TextBoxUserPassword.Text);
+                        teacherForm.GetDataFromTable();
+                        teacherForm.Show();
                     }
                     else if (NumberOfWorker == 3)
                     {
                         MessageBox.Show("Witaj Pracowniku Sekretariatu");
+                        secretariatForm.SetUserName(TextBoxUserName.Text);
+                        secretariatForm.SetPassword(TextBoxUserPassword.Text);
+                        secretariatForm.GetDataFromTable();
+                        secretariatForm.Show();
                     }
                     else if (NumberOfWorker == 4)
                     {
                         MessageBox.Show("Witaj Mistrzu");
+                        woznyForm.SetUserName(TextBoxUserName.Text);
+                        woznyForm.SetPassword(TextBoxUserName.Text);
+                        woznyForm.GetDataFromTable();
+                        woznyForm.Show();
+
                     }
                     else
                     {
