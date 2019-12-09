@@ -37,6 +37,7 @@
             this.LogInsRadioButton = new System.Windows.Forms.RadioButton();
             this.SalaryRadioButton = new System.Windows.Forms.RadioButton();
             this.ClassTeacherRadioButton = new System.Windows.Forms.RadioButton();
+            this.WorkerPanel = new System.Windows.Forms.Panel();
             ((System.ComponentModel.ISupportInitialize)(this.GriedVieverDataBase)).BeginInit();
             this.SuspendLayout();
             // 
@@ -142,11 +143,19 @@
             this.ClassTeacherRadioButton.UseVisualStyleBackColor = true;
             this.ClassTeacherRadioButton.CheckedChanged += new System.EventHandler(this.ClassTeacherRadioButton_CheckedChanged);
             // 
+            // WorkerPanel
+            // 
+            this.WorkerPanel.Location = new System.Drawing.Point(801, 91);
+            this.WorkerPanel.Name = "WorkerPanel";
+            this.WorkerPanel.Size = new System.Drawing.Size(253, 238);
+            this.WorkerPanel.TabIndex = 9;
+            // 
             // FormForHeadTeacher
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1128, 474);
+            this.Controls.Add(this.WorkerPanel);
             this.Controls.Add(this.ClassTeacherRadioButton);
             this.Controls.Add(this.SalaryRadioButton);
             this.Controls.Add(this.LogInsRadioButton);
@@ -175,5 +184,6 @@
         private System.Windows.Forms.RadioButton LogInsRadioButton;
         private System.Windows.Forms.RadioButton SalaryRadioButton;
         private System.Windows.Forms.RadioButton ClassTeacherRadioButton;
+        private System.Windows.Forms.Panel WorkerPanel;
     }
 }
