@@ -66,7 +66,7 @@ namespace ZadDomLab3
                         MessageBox.Show("Witaj Nauczycielu");
                         teacherForm.SetUserName(TextBoxUserName.Text);
                         teacherForm.SetPassword(TextBoxUserPassword.Text);
-                        teacherForm.GetDataFromTable();
+                        
                         teacherForm.Show();
                     }
                     else if (NumberOfWorker == 3)
@@ -74,7 +74,7 @@ namespace ZadDomLab3
                         MessageBox.Show("Witaj Pracowniku Sekretariatu");
                         secretariatForm.SetUserName(TextBoxUserName.Text);
                         secretariatForm.SetPassword(TextBoxUserPassword.Text);
-                        secretariatForm.GetDataFromTable();
+                        
                         secretariatForm.Show();
                     }
                     else if (NumberOfWorker == 4)
@@ -82,7 +82,7 @@ namespace ZadDomLab3
                         MessageBox.Show("Witaj Mistrzu");
                         woznyForm.SetUserName(TextBoxUserName.Text);
                         woznyForm.SetPassword(TextBoxUserName.Text);
-                        woznyForm.GetDataFromTable();
+                        
                         woznyForm.Show();
 
                     }

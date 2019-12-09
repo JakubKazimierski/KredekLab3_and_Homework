@@ -24,27 +24,7 @@ namespace ZadDomLab3
             InitializeComponent();
         }
 
-        public void GetDataFromTable()
-        {
-            string Grade = "";
-
-            using (var connection = dbConnectionWareHouse())
-            {
-                connection.Open();
-
-                SqlCommand comand = new SqlCommand("Select * From LogIns INNER JOIN Student ON Student.Pesel = LogIns.UserPesel INNER JOIN Grades ON Student.StudentId = Grades.StudentId  Where LogIns.UserName = '" + GetUserName() + "'AND LogIns.UserPassword = '" + GetPassword() + "'", connection);
-                SqlDataReader dataReader = comand.ExecuteReader();
-                while (dataReader.Read())
-                {
-
-
-                    Grade = dataReader.GetValue(11).ToString();
-
-                }
-                connection.Close();
-                //  GradeLabelGrade.Text = Grade;
-            }
-        }
+      
 
         public void SetUserName(string name)
         {
@@ -61,6 +41,188 @@ namespace ZadDomLab3
         public string GetPassword()
         {
             return password;
+        }
+
+        private void WorkerRadioButton_CheckedChanged(object sender, EventArgs e)
+        {
+            using (var connection = dbConnectionWareHouse())
+            {
+
+
+                this.WoznyGridView.Controls.Clear();
+
+                connection.Open();
+
+                using (SqlDataAdapter adapter = new SqlDataAdapter("Select * From  Worker ", connection))
+                {
+                    DataTable table = new DataTable();
+
+
+                    adapter.Fill(table);
+                    WoznyGridView.DataSource = table;
+
+
+                }
+                connection.Close();
+
+
+            }
+        }
+
+        private void StudentsRadioButton_CheckedChanged(object sender, EventArgs e)
+        {
+            using (var connection = dbConnectionWareHouse())
+            {
+
+
+                this.WoznyGridView.Controls.Clear();
+
+                connection.Open();
+
+                using (SqlDataAdapter adapter = new SqlDataAdapter("Select * From  Student ", connection))
+                {
+                    DataTable table = new DataTable();
+
+
+                    adapter.Fill(table);
+                    WoznyGridView.DataSource = table;
+
+
+                }
+                connection.Close();
+
+
+            }
+        }
+
+        private void GradesRadioButton_CheckedChanged(object sender, EventArgs e)
+        {
+            using (var connection = dbConnectionWareHouse())
+            {
+
+
+                this.WoznyGridView.Controls.Clear();
+
+                connection.Open();
+
+                using (SqlDataAdapter adapter = new SqlDataAdapter("Select * From  Grades ", connection))
+                {
+                    DataTable table = new DataTable();
+
+
+                    adapter.Fill(table);
+                    WoznyGridView.DataSource = table;
+
+
+                }
+                connection.Close();
+
+
+            }
+        }
+
+        private void RoleRadioButton_CheckedChanged(object sender, EventArgs e)
+        {
+            using (var connection = dbConnectionWareHouse())
+            {
+
+
+                this.WoznyGridView.Controls.Clear();
+
+                connection.Open();
+
+                using (SqlDataAdapter adapter = new SqlDataAdapter("Select * From  Role ", connection))
+                {
+                    DataTable table = new DataTable();
+
+
+                    adapter.Fill(table);
+                    WoznyGridView.DataSource = table;
+
+
+                }
+                connection.Close();
+
+
+            }
+        }
+
+        private void LogInsRadioButton_CheckedChanged(object sender, EventArgs e)
+        {
+            using (var connection = dbConnectionWareHouse())
+            {
+
+
+                this.WoznyGridView.Controls.Clear();
+
+                connection.Open();
+
+                using (SqlDataAdapter adapter = new SqlDataAdapter("Select * From  LogIns ", connection))
+                {
+                    DataTable table = new DataTable();
+
+
+                    adapter.Fill(table);
+                    WoznyGridView.DataSource = table;
+
+
+                }
+                connection.Close();
+
+
+            }
+        }
+
+        private void SalaryRadioButton_CheckedChanged(object sender, EventArgs e)
+        {
+            using (var connection = dbConnectionWareHouse())
+            {
+
+
+                this.WoznyGridView.Controls.Clear();
+
+                connection.Open();
+
+                using (SqlDataAdapter adapter = new SqlDataAdapter("Select * From  Salary ", connection))
+                {
+                    DataTable table = new DataTable();
+
+
+                    adapter.Fill(table);
+                    WoznyGridView.DataSource = table;
+
+
+                }
+                connection.Close();
+
+
+            }
+        }
+
+        private void ClassTeacherRadioButton_CheckedChanged(object sender, EventArgs e)
+        {
+            using (var connection = dbConnectionWareHouse())
+            {
+
+
+                this.WoznyGridView.Controls.Clear();
+
+                connection.Open();
+
+                using (SqlDataAdapter adapter = new SqlDataAdapter("Select * From  ClassTeacher ", connection))
+                {
+                    DataTable table = new DataTable();
+
+
+                    adapter.Fill(table);
+                    WoznyGridView.DataSource = table;
+
+
+                }
+                connection.Close();
+
+
+            }
         }
     }
 
