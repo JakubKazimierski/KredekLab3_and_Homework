@@ -14,18 +14,25 @@ namespace ZadDomLab3
 {
     public partial class WoznyForm : Form
     {
+        //variables
         private string username;
         private string password;
 
+        //connector to data base
         private readonly Func<SqlConnection> dbConnectionWareHouse = () => new SqlConnection(ConfigurationManager.ConnectionStrings["Lab3"].ConnectionString);
 
+        //constructor
         public WoznyForm()
         {
             InitializeComponent();
         }
 
-      
 
+        #region VariablesMethods
+        /// <summary>
+        /// Methods to get and set private variables
+        /// </summary>
+        /// <param name="name"></param>
         public void SetUserName(string name)
         {
             username = name;
@@ -42,7 +49,14 @@ namespace ZadDomLab3
         {
             return password;
         }
+        #endregion
 
+        #region RadioButtonsRegion
+        /// <summary>
+        /// Method of radio buttton event to get all info from Worker Table form Data Base
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void WorkerRadioButton_CheckedChanged(object sender, EventArgs e)
         {
             using (var connection = dbConnectionWareHouse())
@@ -50,7 +64,7 @@ namespace ZadDomLab3
 
 
                 this.WoznyGridView.Controls.Clear();
-
+                //opening connection
                 connection.Open();
 
                 using (SqlDataAdapter adapter = new SqlDataAdapter("Select * From  Worker ", connection))
@@ -63,12 +77,17 @@ namespace ZadDomLab3
 
 
                 }
-                connection.Close();
+                connection.Close();//closing connection
 
 
             }
         }
 
+        /// <summary>
+        /// Method of radio button event to get all info from students table form Data Base
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void StudentsRadioButton_CheckedChanged(object sender, EventArgs e)
         {
             using (var connection = dbConnectionWareHouse())
@@ -76,7 +95,7 @@ namespace ZadDomLab3
 
 
                 this.WoznyGridView.Controls.Clear();
-
+                //opening connection to data base
                 connection.Open();
 
                 using (SqlDataAdapter adapter = new SqlDataAdapter("Select * From  Student ", connection))
@@ -89,12 +108,17 @@ namespace ZadDomLab3
 
 
                 }
-                connection.Close();
+                connection.Close();//closing connection
 
 
             }
         }
 
+        /// <summary>
+        /// Method of Radio Button event to get all info from Grades Table form Data Base
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void GradesRadioButton_CheckedChanged(object sender, EventArgs e)
         {
             using (var connection = dbConnectionWareHouse())
@@ -102,7 +126,7 @@ namespace ZadDomLab3
 
 
                 this.WoznyGridView.Controls.Clear();
-
+                //opening connection
                 connection.Open();
 
                 using (SqlDataAdapter adapter = new SqlDataAdapter("Select * From  Grades ", connection))
@@ -115,12 +139,17 @@ namespace ZadDomLab3
 
 
                 }
-                connection.Close();
+                connection.Close();//closing connection
 
 
             }
         }
 
+        /// <summary>
+        /// Method of radio button event to get All info from Role Table from Data Base
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void RoleRadioButton_CheckedChanged(object sender, EventArgs e)
         {
             using (var connection = dbConnectionWareHouse())
@@ -128,7 +157,7 @@ namespace ZadDomLab3
 
 
                 this.WoznyGridView.Controls.Clear();
-
+                //opening connection
                 connection.Open();
 
                 using (SqlDataAdapter adapter = new SqlDataAdapter("Select * From  Role ", connection))
@@ -141,12 +170,18 @@ namespace ZadDomLab3
 
 
                 }
-                connection.Close();
+                connection.Close();//closing connection
 
 
             }
         }
 
+        /// <summary>
+        /// 
+        ///Method of radio button event to get all info from LogIns Table from Data Base
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void LogInsRadioButton_CheckedChanged(object sender, EventArgs e)
         {
             using (var connection = dbConnectionWareHouse())
@@ -154,7 +189,7 @@ namespace ZadDomLab3
 
 
                 this.WoznyGridView.Controls.Clear();
-
+                //opening connection
                 connection.Open();
 
                 using (SqlDataAdapter adapter = new SqlDataAdapter("Select * From  LogIns ", connection))
@@ -167,12 +202,17 @@ namespace ZadDomLab3
 
 
                 }
-                connection.Close();
+                connection.Close();//closing connection
 
 
             }
         }
 
+        /// <summary>
+        /// Method of Radio Button event to get all info from salary table from data base
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void SalaryRadioButton_CheckedChanged(object sender, EventArgs e)
         {
             using (var connection = dbConnectionWareHouse())
@@ -180,7 +220,7 @@ namespace ZadDomLab3
 
 
                 this.WoznyGridView.Controls.Clear();
-
+                //opening connection
                 connection.Open();
 
                 using (SqlDataAdapter adapter = new SqlDataAdapter("Select * From  Salary ", connection))
@@ -193,12 +233,17 @@ namespace ZadDomLab3
 
 
                 }
-                connection.Close();
+                connection.Close();//closing connection
 
 
             }
         }
 
+        /// <summary>
+        /// Method of radio button event to get all info from CassTeacher Table from Data Base
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void ClassTeacherRadioButton_CheckedChanged(object sender, EventArgs e)
         {
             using (var connection = dbConnectionWareHouse())
@@ -206,7 +251,7 @@ namespace ZadDomLab3
 
 
                 this.WoznyGridView.Controls.Clear();
-
+                //opening connection
                 connection.Open();
 
                 using (SqlDataAdapter adapter = new SqlDataAdapter("Select * From  ClassTeacher ", connection))
@@ -219,11 +264,12 @@ namespace ZadDomLab3
 
 
                 }
-                connection.Close();
+                connection.Close();//closing connection
 
 
             }
         }
+        #endregion
     }
 
 }
