@@ -245,14 +245,39 @@ namespace ZadDomLab3
             using (var connection = dbConnectionWareHouse())
             {
 
-               
+                if (NameTextBox.Text != "" && SurnameTextBox.Text != "" && PeselTextBox.Text != "" && RoleTextBox.Text != "")
+                {
 
-                connection.Open();
+                    connection.Open();
 
-                string query = " UPDATE Worker SET RoleId = '" + Int32.Parse(RoleTextBox.Text) + "' WHERE Name = '" + NameTextBox.Text + "' AND Surname = '" + SurnameTextBox.Text + "' AND Pesel = '" + Int32.Parse(PeselTextBox.Text) + "'";
-                SqlCommand update = new SqlCommand(query, connection);
-                update.ExecuteNonQuery();
-                connection.Close();
+                    string query = " UPDATE Worker SET RoleId = '" + Int32.Parse(RoleTextBox.Text) + "' WHERE Name = '" + NameTextBox.Text + "' AND Surname = '" + SurnameTextBox.Text + "' AND Pesel = '" + Int32.Parse(PeselTextBox.Text) + "'";
+                    SqlCommand update = new SqlCommand(query, connection);
+                    update.ExecuteNonQuery();
+                    connection.Close();
+                    this.GriedVieverDataBase.Controls.Clear();
+
+
+
+
+                    connection.Open();
+
+                    using (SqlDataAdapter adapter = new SqlDataAdapter("Select * From Worker", connection))
+                    {
+                        DataTable table = new DataTable();
+
+
+                        adapter.Fill(table);
+                        GriedVieverDataBase.DataSource = table;
+
+
+                    }
+                    connection.Close();
+                }
+                else
+                {
+                    MessageBox.Show("Wprowadz Wszystkie Dane");
+                }
+                
 
             }
         }
