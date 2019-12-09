@@ -31,20 +31,23 @@
             this.GradeLabelTitle = new System.Windows.Forms.Label();
             this.GradeLabelGrade = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.TitleSchoolLabel = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // GradeLabelTitle
             // 
-            this.GradeLabelTitle.Location = new System.Drawing.Point(178, 181);
+            this.GradeLabelTitle.Font = new System.Drawing.Font("Elephant", 10.09346F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.GradeLabelTitle.Location = new System.Drawing.Point(150, 181);
             this.GradeLabelTitle.Name = "GradeLabelTitle";
-            this.GradeLabelTitle.Size = new System.Drawing.Size(148, 57);
+            this.GradeLabelTitle.Size = new System.Drawing.Size(176, 57);
             this.GradeLabelTitle.TabIndex = 0;
             this.GradeLabelTitle.Text = "Twoja Średnia Ocen:";
             this.GradeLabelTitle.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // GradeLabelGrade
             // 
+            this.GradeLabelGrade.BackColor = System.Drawing.SystemColors.ControlDarkDark;
             this.GradeLabelGrade.Location = new System.Drawing.Point(341, 181);
             this.GradeLabelGrade.Name = "GradeLabelGrade";
             this.GradeLabelGrade.Size = new System.Drawing.Size(148, 57);
@@ -61,11 +64,23 @@
             this.pictureBox1.TabIndex = 2;
             this.pictureBox1.TabStop = false;
             // 
+            // TitleSchoolLabel
+            // 
+            this.TitleSchoolLabel.Font = new System.Drawing.Font("Algerian", 14.13084F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TitleSchoolLabel.Location = new System.Drawing.Point(98, 23);
+            this.TitleSchoolLabel.Name = "TitleSchoolLabel";
+            this.TitleSchoolLabel.Size = new System.Drawing.Size(452, 79);
+            this.TitleSchoolLabel.TabIndex = 3;
+            this.TitleSchoolLabel.Text = "I Liceum Ogólnoksztalcace";
+            this.TitleSchoolLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
             // FormForStudents
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.SystemColors.ControlDark;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.TitleSchoolLabel);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.GradeLabelGrade);
             this.Controls.Add(this.GradeLabelTitle);
@@ -81,5 +96,6 @@
         private System.Windows.Forms.Label GradeLabelTitle;
         private System.Windows.Forms.Label GradeLabelGrade;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Label TitleSchoolLabel;
     }
 }
