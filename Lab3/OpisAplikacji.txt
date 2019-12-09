@@ -1,0 +1,36 @@
+Aplikacja imituje system logowania pracowników oraz uczniów w szkole.
+
+Wszystkie loginy oraz has³a znajduj¹ siê w skrypcie wygenerowanej Bazy Danych.
+Osobiœcie jednak polecam skorzystaæ ze skryptu, który wygenerowa³em tworz¹c
+Bazê danych, gdy¿ jest po prostu czytelniejszy. 
+
+Aby u³atwiæ rozeznanie w aplikacji podam login i has³o z dostêpami
+do najwa¿niejszych i ocenianych w tym zadaniu funkcjonalnoœci
+Jest to konto dyrektora:
+			>Login: Dyrektor
+			>Has³o: DR121518
+
+Oczywiœcie istnieje mo¿liwoœæ logowania siê z inncyh kont,
+jednak nie ka¿de konto (tak jak w prawdziwym œwiecie) udostêpnia
+tak¹ sam¹ funkcjonalnoœæ.
+
+Miedzy innymi:
+		>Dyrektor: 
+			-Dostêp do wszystkich tabel
+			-Mo¿liwoœæ Insert, Update, Delete, Select 
+				na konkretnych tabelach
+		>Nauczyciel:
+			-Wgl¹d w tablicê wychowawców
+			-wgl¹d w tablicê ocen uczniów
+			-wgl¹d w tablicê uczniów
+		
+		>Pracownik Sekretariatu:
+			-Wgl¹d w listê p³ac
+			-Wgl¹d w listê uczniów
+			-wgl¹d w listê pracowników
+		
+		>Uczeñ:
+			-Wgl¹d w tylko swoj¹ œredni¹ ocen
+		>WoŸny:
+			-jest to swojego rodzaju Easter Egg
+			-Dostêp do wszystkich tabel 
