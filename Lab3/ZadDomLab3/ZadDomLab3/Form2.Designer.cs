@@ -352,6 +352,7 @@
             this.LoginsUpdateButton.TabIndex = 11;
             this.LoginsUpdateButton.Text = "Aktualizuj Dane";
             this.LoginsUpdateButton.UseVisualStyleBackColor = true;
+            this.LoginsUpdateButton.Click += new System.EventHandler(this.LoginsUpdateButton_Click);
             // 
             // LoginsInsertButton
             // 
