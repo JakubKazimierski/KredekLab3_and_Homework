@@ -1,6 +1,6 @@
 ﻿namespace ZadDomLab3
 {
-    partial class Form1
+    partial class FormularzLogin
     {
         /// <summary>
         /// Wymagana zmienna projektanta.

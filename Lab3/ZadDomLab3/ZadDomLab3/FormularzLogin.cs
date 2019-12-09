@@ -12,14 +12,14 @@ using System.Windows.Forms;
 
 namespace ZadDomLab3
 {
-    public partial class Form1 : Form
+    public partial class FormularzLogin : Form
     {
         private readonly Func<SqlConnection> dbConnectionWareHouse = () => new SqlConnection(ConfigurationManager.ConnectionStrings["Lab3"].ConnectionString);
         
         /// <summary>
         /// Constructor
         /// </summary>
-        public Form1()
+        public FormularzLogin()
         {
             InitializeComponent();
             TextBoxUserPassword.PasswordChar = '*';
