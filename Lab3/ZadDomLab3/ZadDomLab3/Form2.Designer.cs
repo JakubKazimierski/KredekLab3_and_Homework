@@ -77,9 +77,10 @@
             // 
             // HeadTeacherLabelTableSelect
             // 
+            this.HeadTeacherLabelTableSelect.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.09346F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.HeadTeacherLabelTableSelect.Location = new System.Drawing.Point(541, 12);
             this.HeadTeacherLabelTableSelect.Name = "HeadTeacherLabelTableSelect";
-            this.HeadTeacherLabelTableSelect.Size = new System.Drawing.Size(282, 50);
+            this.HeadTeacherLabelTableSelect.Size = new System.Drawing.Size(250, 50);
             this.HeadTeacherLabelTableSelect.TabIndex = 1;
             this.HeadTeacherLabelTableSelect.Text = "Wybierz Tabelę";
             this.HeadTeacherLabelTableSelect.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -87,9 +88,10 @@
             // WorkerRadioButton
             // 
             this.WorkerRadioButton.AutoSize = true;
+            this.WorkerRadioButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 6.728972F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.WorkerRadioButton.Location = new System.Drawing.Point(544, 91);
             this.WorkerRadioButton.Name = "WorkerRadioButton";
-            this.WorkerRadioButton.Size = new System.Drawing.Size(80, 17);
+            this.WorkerRadioButton.Size = new System.Drawing.Size(88, 17);
             this.WorkerRadioButton.TabIndex = 2;
             this.WorkerRadioButton.TabStop = true;
             this.WorkerRadioButton.Text = "Pracownicy";
@@ -99,9 +101,10 @@
             // StudentsRadioButton
             // 
             this.StudentsRadioButton.AutoSize = true;
+            this.StudentsRadioButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 6.728972F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.StudentsRadioButton.Location = new System.Drawing.Point(544, 132);
             this.StudentsRadioButton.Name = "StudentsRadioButton";
-            this.StudentsRadioButton.Size = new System.Drawing.Size(74, 17);
+            this.StudentsRadioButton.Size = new System.Drawing.Size(81, 17);
             this.StudentsRadioButton.TabIndex = 3;
             this.StudentsRadioButton.TabStop = true;
             this.StudentsRadioButton.Text = "Uczniowie";
@@ -111,9 +114,10 @@
             // GradesRadioButton
             // 
             this.GradesRadioButton.AutoSize = true;
+            this.GradesRadioButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 6.728972F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.GradesRadioButton.Location = new System.Drawing.Point(544, 179);
             this.GradesRadioButton.Name = "GradesRadioButton";
-            this.GradesRadioButton.Size = new System.Drawing.Size(100, 17);
+            this.GradesRadioButton.Size = new System.Drawing.Size(110, 17);
             this.GradesRadioButton.TabIndex = 4;
             this.GradesRadioButton.TabStop = true;
             this.GradesRadioButton.Text = "Oceny Uczniów";
@@ -123,9 +127,10 @@
             // RoleRadioButton
             // 
             this.RoleRadioButton.AutoSize = true;
+            this.RoleRadioButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 6.728972F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.RoleRadioButton.Location = new System.Drawing.Point(544, 228);
             this.RoleRadioButton.Name = "RoleRadioButton";
-            this.RoleRadioButton.Size = new System.Drawing.Size(131, 17);
+            this.RoleRadioButton.Size = new System.Drawing.Size(147, 17);
             this.RoleRadioButton.TabIndex = 5;
             this.RoleRadioButton.TabStop = true;
             this.RoleRadioButton.Text = "Rodzaje Pracowników";
@@ -135,9 +140,10 @@
             // LogInsRadioButton
             // 
             this.LogInsRadioButton.AutoSize = true;
+            this.LogInsRadioButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 6.728972F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.LogInsRadioButton.Location = new System.Drawing.Point(544, 271);
             this.LogInsRadioButton.Name = "LogInsRadioButton";
-            this.LogInsRadioButton.Size = new System.Drawing.Size(93, 17);
+            this.LogInsRadioButton.Size = new System.Drawing.Size(104, 17);
             this.LogInsRadioButton.TabIndex = 6;
             this.LogInsRadioButton.TabStop = true;
             this.LogInsRadioButton.Text = "Loginy i Hasła";
@@ -147,9 +153,10 @@
             // SalaryRadioButton
             // 
             this.SalaryRadioButton.AutoSize = true;
+            this.SalaryRadioButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 6.728972F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.SalaryRadioButton.Location = new System.Drawing.Point(544, 312);
             this.SalaryRadioButton.Name = "SalaryRadioButton";
-            this.SalaryRadioButton.Size = new System.Drawing.Size(65, 17);
+            this.SalaryRadioButton.Size = new System.Drawing.Size(68, 17);
             this.SalaryRadioButton.TabIndex = 7;
             this.SalaryRadioButton.TabStop = true;
             this.SalaryRadioButton.Text = "Wypłaty";
@@ -159,9 +166,10 @@
             // ClassTeacherRadioButton
             // 
             this.ClassTeacherRadioButton.AutoSize = true;
+            this.ClassTeacherRadioButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 6.728972F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.ClassTeacherRadioButton.Location = new System.Drawing.Point(544, 350);
             this.ClassTeacherRadioButton.Name = "ClassTeacherRadioButton";
-            this.ClassTeacherRadioButton.Size = new System.Drawing.Size(124, 17);
+            this.ClassTeacherRadioButton.Size = new System.Drawing.Size(137, 17);
             this.ClassTeacherRadioButton.TabIndex = 8;
             this.ClassTeacherRadioButton.TabStop = true;
             this.ClassTeacherRadioButton.Text = "Wychowawcy i klasy";
@@ -189,6 +197,7 @@
             // 
             // NameLabel
             // 
+            this.NameLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 6.728972F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.NameLabel.Location = new System.Drawing.Point(28, 25);
             this.NameLabel.Name = "NameLabel";
             this.NameLabel.Size = new System.Drawing.Size(100, 23);
@@ -198,6 +207,7 @@
             // 
             // SurnameLabel
             // 
+            this.SurnameLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 6.728972F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.SurnameLabel.Location = new System.Drawing.Point(28, 62);
             this.SurnameLabel.Name = "SurnameLabel";
             this.SurnameLabel.Size = new System.Drawing.Size(100, 23);
@@ -207,6 +217,7 @@
             // 
             // PeselLabel
             // 
+            this.PeselLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 6.728972F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.PeselLabel.Location = new System.Drawing.Point(28, 103);
             this.PeselLabel.Name = "PeselLabel";
             this.PeselLabel.Size = new System.Drawing.Size(100, 23);
@@ -216,6 +227,7 @@
             // 
             // RoleLabel
             // 
+            this.RoleLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 6.728972F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.RoleLabel.Location = new System.Drawing.Point(28, 137);
             this.RoleLabel.Name = "RoleLabel";
             this.RoleLabel.Size = new System.Drawing.Size(100, 23);
@@ -253,6 +265,7 @@
             // 
             // UpdateButton
             // 
+            this.UpdateButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 6.728972F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.UpdateButton.Location = new System.Drawing.Point(31, 177);
             this.UpdateButton.Name = "UpdateButton";
             this.UpdateButton.Size = new System.Drawing.Size(203, 23);
@@ -263,6 +276,7 @@
             // 
             // InsertButton
             // 
+            this.InsertButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 6.728972F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.InsertButton.Location = new System.Drawing.Point(31, 206);
             this.InsertButton.Name = "InsertButton";
             this.InsertButton.Size = new System.Drawing.Size(203, 23);
@@ -273,6 +287,7 @@
             // 
             // SelectButton
             // 
+            this.SelectButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 6.728972F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.SelectButton.Location = new System.Drawing.Point(31, 235);
             this.SelectButton.Name = "SelectButton";
             this.SelectButton.Size = new System.Drawing.Size(203, 23);
@@ -300,6 +315,7 @@
             // 
             // PeselPanel
             // 
+            this.PeselPanel.Font = new System.Drawing.Font("Microsoft Sans Serif", 6.728972F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.PeselPanel.Location = new System.Drawing.Point(28, 27);
             this.PeselPanel.Name = "PeselPanel";
             this.PeselPanel.Size = new System.Drawing.Size(100, 23);
@@ -309,6 +325,7 @@
             // 
             // UserNameLabel
             // 
+            this.UserNameLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 6.728972F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.UserNameLabel.Location = new System.Drawing.Point(28, 71);
             this.UserNameLabel.Name = "UserNameLabel";
             this.UserNameLabel.Size = new System.Drawing.Size(100, 23);
@@ -318,6 +335,7 @@
             // 
             // PasswordLabel
             // 
+            this.PasswordLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 6.728972F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.PasswordLabel.Location = new System.Drawing.Point(28, 110);
             this.PasswordLabel.Name = "PasswordLabel";
             this.PasswordLabel.Size = new System.Drawing.Size(100, 23);
@@ -348,6 +366,7 @@
             // 
             // LoginsUpdateButton
             // 
+            this.LoginsUpdateButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 6.728972F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.LoginsUpdateButton.Location = new System.Drawing.Point(31, 139);
             this.LoginsUpdateButton.Name = "LoginsUpdateButton";
             this.LoginsUpdateButton.Size = new System.Drawing.Size(203, 23);
@@ -358,6 +377,7 @@
             // 
             // LoginsInsertButton
             // 
+            this.LoginsInsertButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 6.728972F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.LoginsInsertButton.Location = new System.Drawing.Point(31, 168);
             this.LoginsInsertButton.Name = "LoginsInsertButton";
             this.LoginsInsertButton.Size = new System.Drawing.Size(203, 23);
@@ -368,6 +388,7 @@
             // 
             // LoginsDeleteButton
             // 
+            this.LoginsDeleteButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 6.728972F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.LoginsDeleteButton.Location = new System.Drawing.Point(31, 195);
             this.LoginsDeleteButton.Name = "LoginsDeleteButton";
             this.LoginsDeleteButton.Size = new System.Drawing.Size(203, 23);

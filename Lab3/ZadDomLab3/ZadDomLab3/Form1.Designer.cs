@@ -77,7 +77,7 @@
             // 
             // ButtonLogIn
             // 
-            this.ButtonLogIn.BackColor = System.Drawing.Color.LightSlateGray;
+            this.ButtonLogIn.BackColor = System.Drawing.SystemColors.Control;
             this.ButtonLogIn.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.747663F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.ButtonLogIn.Location = new System.Drawing.Point(84, 181);
             this.ButtonLogIn.Name = "ButtonLogIn";
@@ -99,9 +99,9 @@
             // 
             // LabelWithTiltle
             // 
-            this.LabelWithTiltle.BackColor = System.Drawing.Color.Gray;
+            this.LabelWithTiltle.BackColor = System.Drawing.Color.DimGray;
             this.LabelWithTiltle.Font = new System.Drawing.Font("Impact", 22.20561F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LabelWithTiltle.Location = new System.Drawing.Point(34, 67);
+            this.LabelWithTiltle.Location = new System.Drawing.Point(48, 106);
             this.LabelWithTiltle.Name = "LabelWithTiltle";
             this.LabelWithTiltle.Size = new System.Drawing.Size(344, 97);
             this.LabelWithTiltle.TabIndex = 6;
@@ -120,14 +120,14 @@
             // 
             // PanelWithLogIn
             // 
-            this.PanelWithLogIn.BackColor = System.Drawing.Color.Gray;
+            this.PanelWithLogIn.BackColor = System.Drawing.Color.DimGray;
             this.PanelWithLogIn.Controls.Add(this.LabelUserName);
             this.PanelWithLogIn.Controls.Add(this.LabelLogInTitle);
             this.PanelWithLogIn.Controls.Add(this.LabelUserPassword);
             this.PanelWithLogIn.Controls.Add(this.ButtonLogIn);
             this.PanelWithLogIn.Controls.Add(this.TextBoxUserPassword);
             this.PanelWithLogIn.Controls.Add(this.TextBoxUserName);
-            this.PanelWithLogIn.Location = new System.Drawing.Point(471, 12);
+            this.PanelWithLogIn.Location = new System.Drawing.Point(463, 25);
             this.PanelWithLogIn.Name = "PanelWithLogIn";
             this.PanelWithLogIn.Size = new System.Drawing.Size(300, 237);
             this.PanelWithLogIn.TabIndex = 8;
