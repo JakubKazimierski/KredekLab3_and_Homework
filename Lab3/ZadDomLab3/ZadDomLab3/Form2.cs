@@ -323,5 +323,34 @@ namespace ZadDomLab3
 
             }
         }
+
+        private void SelectButton_Click(object sender, EventArgs e)
+        {
+            using (var connection = dbConnectionWareHouse())
+            {
+                if (PeselTextBox.Text != "" && RoleTextBox.Text != "" && NameTextBox.Text!="" && SurnameTextBox.Text != "")
+                {
+                    this.GriedVieverDataBase.Controls.Clear();
+
+                    connection.Open();
+
+                    using (SqlDataAdapter adapter = new SqlDataAdapter("Select Name, Surname, Pesel, RoleId From Worker WHERE Name = '" + NameTextBox.Text + "' OR Surname = '" + SurnameTextBox.Text + "' OR Pesel = '" + Int32.Parse(PeselTextBox.Text) + "' OR RoleId = '" + Int32.Parse(RoleTextBox.Text) + "'", connection))
+                    {
+                        DataTable table = new DataTable();
+
+
+                        adapter.Fill(table);
+                        GriedVieverDataBase.DataSource = table;
+
+
+                    }
+                    connection.Close();
+                }
+                else
+                {
+                    MessageBox.Show("Pesel i Rola oraz Imie i Nazwisko nie mogą być pustymi polami");
+                }
+            }
+        }
     }
 }

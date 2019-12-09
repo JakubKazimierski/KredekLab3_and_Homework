@@ -277,6 +277,7 @@
             this.SelectButton.TabIndex = 10;
             this.SelectButton.Text = "Wyszukaj Pracownika";
             this.SelectButton.UseVisualStyleBackColor = true;
+            this.SelectButton.Click += new System.EventHandler(this.SelectButton_Click);
             // 
             // LoginsPanel
             // 
