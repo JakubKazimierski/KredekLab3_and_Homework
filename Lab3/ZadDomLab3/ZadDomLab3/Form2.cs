@@ -281,5 +281,47 @@ namespace ZadDomLab3
 
             }
         }
+
+        private void InsertButton_Click(object sender, EventArgs e)
+        {
+            using (var connection = dbConnectionWareHouse())
+            {
+
+                if (NameTextBox.Text != "" && SurnameTextBox.Text != "" && PeselTextBox.Text != "" && RoleTextBox.Text != "")
+                {
+
+                    connection.Open();
+
+                    string query = " INSERT INTO  Worker ( Name, Surname, Pesel, RoleId) VALUES  ('"+ NameTextBox.Text +"','"+ SurnameTextBox.Text +"','"+ Int32.Parse(PeselTextBox.Text) +"','"+ Int32.Parse(RoleTextBox.Text)+"')";
+                    SqlCommand update = new SqlCommand(query, connection);
+                    update.ExecuteNonQuery();
+                    connection.Close();
+                    this.GriedVieverDataBase.Controls.Clear();
+
+
+
+
+                    connection.Open();
+
+                    using (SqlDataAdapter adapter = new SqlDataAdapter("Select * From Worker", connection))
+                    {
+                        DataTable table = new DataTable();
+
+
+                        adapter.Fill(table);
+                        GriedVieverDataBase.DataSource = table;
+
+
+                    }
+                    connection.Close();
+                }
+                else
+                {
+                    MessageBox.Show("Wprowadz Wszystkie Dane");
+                }
+
+
+            }
+        }
     }
 }

@@ -267,6 +267,7 @@
             this.InsertButton.TabIndex = 9;
             this.InsertButton.Text = "Wprowadź Dane";
             this.InsertButton.UseVisualStyleBackColor = true;
+            this.InsertButton.Click += new System.EventHandler(this.InsertButton_Click);
             // 
             // SelectButton
             // 
