@@ -63,8 +63,11 @@ namespace ZadDomLab3
             return IsTrue;
         }
 
-
-
+        #region VariablesMethod
+        /// <summary>
+        /// Methods to set and get variables
+        /// </summary>
+        /// <param name="number"></param>
         public void SetPesel(int number)
         {
             Pesel = number;
@@ -76,5 +79,6 @@ namespace ZadDomLab3
             return Pesel;
 
         }
+        #endregion
     }
 }
