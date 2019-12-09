@@ -362,6 +362,7 @@
             this.LoginsInsertButton.TabIndex = 16;
             this.LoginsInsertButton.Text = "Wprowadź Dane";
             this.LoginsInsertButton.UseVisualStyleBackColor = true;
+            this.LoginsInsertButton.Click += new System.EventHandler(this.LoginsInsertButton_Click);
             // 
             // LoginsDeleteButton
             // 
