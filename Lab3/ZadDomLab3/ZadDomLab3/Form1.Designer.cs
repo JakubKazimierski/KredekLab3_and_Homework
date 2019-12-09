@@ -92,7 +92,7 @@
             this.pictureBox1.Image = global::ZadDomLab3.Properties.Resources.szkolaImage;
             this.pictureBox1.Location = new System.Drawing.Point(12, 268);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(832, 459);
+            this.pictureBox1.Size = new System.Drawing.Size(832, 527);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 5;
             this.pictureBox1.TabStop = false;
@@ -137,7 +137,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.DarkGray;
-            this.ClientSize = new System.Drawing.Size(856, 739);
+            this.ClientSize = new System.Drawing.Size(856, 807);
             this.Controls.Add(this.PanelWithLogIn);
             this.Controls.Add(this.LabelWithTiltle);
             this.Controls.Add(this.pictureBox1);

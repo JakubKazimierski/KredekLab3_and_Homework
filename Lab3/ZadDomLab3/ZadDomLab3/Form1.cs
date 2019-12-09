@@ -15,25 +15,41 @@ namespace ZadDomLab3
     public partial class Form1 : Form
     {
         private readonly Func<SqlConnection> dbConnectionWareHouse = () => new SqlConnection(ConfigurationManager.ConnectionStrings["Lab3"].ConnectionString);
+        
+        /// <summary>
+        /// Constructor
+        /// </summary>
         public Form1()
         {
             InitializeComponent();
         }
 
+        /// <summary>
+        /// Method of action Button to log in
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void ButtonLogIn_Click(object sender, EventArgs e)
         {
-            
+
+            #region ObjectOfClasses
+
+            //Creating object of Forms
             FormForHeadTeacher formForHeadTeacher = new FormForHeadTeacher();
             FormForStudents studentsForm = new FormForStudents();
             TeacherForm teacherForm = new TeacherForm();
             SecretariatForm secretariatForm = new SecretariatForm();
             WoznyForm woznyForm = new WoznyForm();
 
-
+            //object of clas checking if log in is correct
             SignIn sigin = new SignIn(TextBoxUserName.Text, TextBoxUserPassword.Text);
+            #endregion
+
+            #region LogInLogic
+            //method of log in, and also opening correct forms
             if (sigin.SignInSchool())
             {
-
+                //Depending from worker number form DataBase, correct form will be open
                 int NumberOfWorker = 0;
                 int NumberOfPesel = 0;
                 using (var connection = dbConnectionWareHouse())
@@ -44,14 +60,14 @@ namespace ZadDomLab3
                     SqlDataReader dataReader = comand.ExecuteReader();
                     while (dataReader.Read())
                     {
-                        // MessageBox.Show(dataReader.GetValue(8).ToString());
+                        
 
                         NumberOfWorker = Int32.Parse(dataReader.GetValue(8).ToString());
                         NumberOfPesel = Int32.Parse(dataReader.GetValue(1).ToString());
                     }
                     connection.Close();
 
-
+                    //1 is Head Teacher
                     if (NumberOfWorker == 1)
                     {
                         MessageBox.Show("Witaj Dyrektorze");
@@ -61,6 +77,7 @@ namespace ZadDomLab3
                         formForHeadTeacher.Show();
                     
                     }
+                    //2 is Teacher
                     else if (NumberOfWorker == 2)
                     {
                         MessageBox.Show("Witaj Nauczycielu");
@@ -69,6 +86,7 @@ namespace ZadDomLab3
                         
                         teacherForm.Show();
                     }
+                    //3 is secretariat worker
                     else if (NumberOfWorker == 3)
                     {
                         MessageBox.Show("Witaj Pracowniku Sekretariatu");
@@ -77,6 +95,7 @@ namespace ZadDomLab3
                         
                         secretariatForm.Show();
                     }
+                    //4 is Wozny
                     else if (NumberOfWorker == 4)
                     {
                         MessageBox.Show("Witaj Mistrzu");
@@ -86,6 +105,7 @@ namespace ZadDomLab3
                         woznyForm.Show();
 
                     }
+                    //anything else is for students
                     else
                     {
 
@@ -104,6 +124,8 @@ namespace ZadDomLab3
             {
                 MessageBox.Show("Nie udalo sie");
             }
+            #endregion
         }
+
     }
 }
