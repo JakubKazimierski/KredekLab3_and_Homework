@@ -50,9 +50,10 @@
             // StudentsRadioButton
             // 
             this.StudentsRadioButton.AutoSize = true;
+            this.StudentsRadioButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 6.728972F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.StudentsRadioButton.Location = new System.Drawing.Point(373, 118);
             this.StudentsRadioButton.Name = "StudentsRadioButton";
-            this.StudentsRadioButton.Size = new System.Drawing.Size(74, 17);
+            this.StudentsRadioButton.Size = new System.Drawing.Size(81, 17);
             this.StudentsRadioButton.TabIndex = 1;
             this.StudentsRadioButton.TabStop = true;
             this.StudentsRadioButton.Text = "Uczniowie";
@@ -62,9 +63,10 @@
             // ClassTeacherRadioButton
             // 
             this.ClassTeacherRadioButton.AutoSize = true;
+            this.ClassTeacherRadioButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 6.728972F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.ClassTeacherRadioButton.Location = new System.Drawing.Point(373, 160);
             this.ClassTeacherRadioButton.Name = "ClassTeacherRadioButton";
-            this.ClassTeacherRadioButton.Size = new System.Drawing.Size(135, 17);
+            this.ClassTeacherRadioButton.Size = new System.Drawing.Size(151, 17);
             this.ClassTeacherRadioButton.TabIndex = 2;
             this.ClassTeacherRadioButton.TabStop = true;
             this.ClassTeacherRadioButton.Text = "Wychowawstwa i klasy";
@@ -74,9 +76,10 @@
             // GradesRadioButton
             // 
             this.GradesRadioButton.AutoSize = true;
+            this.GradesRadioButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 6.728972F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.GradesRadioButton.Location = new System.Drawing.Point(373, 201);
             this.GradesRadioButton.Name = "GradesRadioButton";
-            this.GradesRadioButton.Size = new System.Drawing.Size(100, 17);
+            this.GradesRadioButton.Size = new System.Drawing.Size(110, 17);
             this.GradesRadioButton.TabIndex = 3;
             this.GradesRadioButton.TabStop = true;
             this.GradesRadioButton.Text = "Oceny Uczniów";
@@ -85,6 +88,7 @@
             // 
             // TeacherLabelSelect
             // 
+            this.TeacherLabelSelect.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.09346F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.TeacherLabelSelect.Location = new System.Drawing.Point(348, 49);
             this.TeacherLabelSelect.Name = "TeacherLabelSelect";
             this.TeacherLabelSelect.Size = new System.Drawing.Size(126, 38);

@@ -48,6 +48,7 @@
             // GradeLabelGrade
             // 
             this.GradeLabelGrade.BackColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.GradeLabelGrade.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.09346F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.GradeLabelGrade.Location = new System.Drawing.Point(341, 181);
             this.GradeLabelGrade.Name = "GradeLabelGrade";
             this.GradeLabelGrade.Size = new System.Drawing.Size(148, 57);
