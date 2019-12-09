@@ -35,7 +35,9 @@
             this.WorkersRadioButton = new System.Windows.Forms.RadioButton();
             this.RoleRadioButton = new System.Windows.Forms.RadioButton();
             this.StudentsRadioButton = new System.Windows.Forms.RadioButton();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.SecretariatGridView)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // SecretariatGridView
@@ -104,11 +106,22 @@
             this.StudentsRadioButton.UseVisualStyleBackColor = true;
             this.StudentsRadioButton.CheckedChanged += new System.EventHandler(this.StudentsRadioButton_CheckedChanged);
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::ZadDomLab3.Properties.Resources.herb;
+            this.pictureBox1.Location = new System.Drawing.Point(563, 84);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(174, 199);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 6;
+            this.pictureBox1.TabStop = false;
+            // 
             // SecretariatForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.StudentsRadioButton);
             this.Controls.Add(this.RoleRadioButton);
             this.Controls.Add(this.WorkersRadioButton);
@@ -118,6 +131,7 @@
             this.Name = "SecretariatForm";
             this.Text = "SchoolPlatform";
             ((System.ComponentModel.ISupportInitialize)(this.SecretariatGridView)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -132,5 +146,6 @@
         private System.Windows.Forms.RadioButton WorkersRadioButton;
         private System.Windows.Forms.RadioButton RoleRadioButton;
         private System.Windows.Forms.RadioButton StudentsRadioButton;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }

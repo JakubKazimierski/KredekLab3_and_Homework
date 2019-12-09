@@ -33,7 +33,9 @@
             this.ClassTeacherRadioButton = new System.Windows.Forms.RadioButton();
             this.GradesRadioButton = new System.Windows.Forms.RadioButton();
             this.TeacherLabelSelect = new System.Windows.Forms.Label();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.TeacherTableDataGridViever)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // TeacherTableDataGridViever
@@ -90,11 +92,22 @@
             this.TeacherLabelSelect.Text = "Wybierz Tabelę";
             this.TeacherLabelSelect.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::ZadDomLab3.Properties.Resources.herb;
+            this.pictureBox1.Location = new System.Drawing.Point(573, 81);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(171, 188);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 5;
+            this.pictureBox1.TabStop = false;
+            // 
             // TeacherForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.TeacherLabelSelect);
             this.Controls.Add(this.GradesRadioButton);
             this.Controls.Add(this.ClassTeacherRadioButton);
@@ -103,6 +116,7 @@
             this.Name = "TeacherForm";
             this.Text = "SchoolPlatform";
             ((System.ComponentModel.ISupportInitialize)(this.TeacherTableDataGridViever)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -115,5 +129,6 @@
         private System.Windows.Forms.RadioButton ClassTeacherRadioButton;
         private System.Windows.Forms.RadioButton GradesRadioButton;
         private System.Windows.Forms.Label TeacherLabelSelect;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }

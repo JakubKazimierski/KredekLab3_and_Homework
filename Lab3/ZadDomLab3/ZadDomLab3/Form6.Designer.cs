@@ -37,7 +37,9 @@
             this.LogInsRadioButton = new System.Windows.Forms.RadioButton();
             this.SalaryRadioButton = new System.Windows.Forms.RadioButton();
             this.ClassTeacherRadioButton = new System.Windows.Forms.RadioButton();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.WoznyGridView)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // WoznyGridView
@@ -142,11 +144,22 @@
             this.ClassTeacherRadioButton.UseVisualStyleBackColor = true;
             this.ClassTeacherRadioButton.CheckedChanged += new System.EventHandler(this.ClassTeacherRadioButton_CheckedChanged);
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::ZadDomLab3.Properties.Resources.herb;
+            this.pictureBox1.Location = new System.Drawing.Point(585, 87);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(176, 193);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 9;
+            this.pictureBox1.TabStop = false;
+            // 
             // WoznyForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.ClassTeacherRadioButton);
             this.Controls.Add(this.SalaryRadioButton);
             this.Controls.Add(this.LogInsRadioButton);
@@ -159,6 +172,7 @@
             this.Name = "WoznyForm";
             this.Text = "SchoolPlatform";
             ((System.ComponentModel.ISupportInitialize)(this.WoznyGridView)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -175,5 +189,6 @@
         private System.Windows.Forms.RadioButton LogInsRadioButton;
         private System.Windows.Forms.RadioButton SalaryRadioButton;
         private System.Windows.Forms.RadioButton ClassTeacherRadioButton;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }
