@@ -22,6 +22,7 @@ namespace ZadDomLab3
         public Form1()
         {
             InitializeComponent();
+            TextBoxUserPassword.PasswordChar = '*';
         }
 
         /// <summary>
