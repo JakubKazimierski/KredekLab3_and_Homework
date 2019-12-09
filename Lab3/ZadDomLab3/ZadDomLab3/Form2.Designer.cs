@@ -372,6 +372,7 @@
             this.LoginsDeleteButton.TabIndex = 17;
             this.LoginsDeleteButton.Text = "Usuń Dane";
             this.LoginsDeleteButton.UseVisualStyleBackColor = true;
+            this.LoginsDeleteButton.Click += new System.EventHandler(this.LoginsDeleteButton_Click);
             // 
             // FormForHeadTeacher
             // 
