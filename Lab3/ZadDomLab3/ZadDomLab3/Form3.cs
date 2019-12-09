@@ -62,6 +62,5 @@ namespace ZadDomLab3
         {
             return password;
         }
-
     }
 }

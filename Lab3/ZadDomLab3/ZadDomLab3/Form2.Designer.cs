@@ -257,6 +257,7 @@
             this.UpdateButton.TabIndex = 8;
             this.UpdateButton.Text = "Aktualizuj Dane";
             this.UpdateButton.UseVisualStyleBackColor = true;
+            this.UpdateButton.Click += new System.EventHandler(this.UpdateButton_Click);
             // 
             // InsertButton
             // 

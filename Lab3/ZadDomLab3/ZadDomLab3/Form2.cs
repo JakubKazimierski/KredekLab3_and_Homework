@@ -239,5 +239,22 @@ namespace ZadDomLab3
             WorkerPanel.Enabled = false;
             LoginsPanel.Enabled = false;
         }
+
+        private void UpdateButton_Click(object sender, EventArgs e)
+        {
+            using (var connection = dbConnectionWareHouse())
+            {
+
+               
+
+                connection.Open();
+
+                string query = " UPDATE Worker SET RoleId = '" + Int32.Parse(RoleTextBox.Text) + "' WHERE Name = '" + NameTextBox.Text + "' AND Surname = '" + SurnameTextBox.Text + "' AND Pesel = '" + Int32.Parse(PeselTextBox.Text) + "'";
+                SqlCommand update = new SqlCommand(query, connection);
+                update.ExecuteNonQuery();
+                connection.Close();
+
+            }
+        }
     }
 }
