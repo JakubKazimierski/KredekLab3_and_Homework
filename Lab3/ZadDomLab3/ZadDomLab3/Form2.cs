@@ -46,6 +46,8 @@ namespace ZadDomLab3
 
         private void WorkerRadioButton_CheckedChanged(object sender, EventArgs e)
         {
+            DisablePanels();
+            WorkerPanel.Enabled = true;
             using (var connection = dbConnectionWareHouse())
             {
 
@@ -71,6 +73,7 @@ namespace ZadDomLab3
 
         private void StudentsRadioButton_CheckedChanged(object sender, EventArgs e)
         {
+            DisablePanels();
             using (var connection = dbConnectionWareHouse())
             {
 
@@ -97,6 +100,7 @@ namespace ZadDomLab3
 
         private void GradesRadioButton_CheckedChanged(object sender, EventArgs e)
         {
+            DisablePanels();
             using (var connection = dbConnectionWareHouse())
             {
 
@@ -123,6 +127,7 @@ namespace ZadDomLab3
 
         private void RoleRadioButton_CheckedChanged(object sender, EventArgs e)
         {
+            DisablePanels();
             using (var connection = dbConnectionWareHouse())
             {
 
@@ -149,6 +154,8 @@ namespace ZadDomLab3
 
         private void LogInsRadioButton_CheckedChanged(object sender, EventArgs e)
         {
+            DisablePanels();
+            LoginsPanel.Enabled = true;
             using (var connection = dbConnectionWareHouse())
             {
 
@@ -175,6 +182,7 @@ namespace ZadDomLab3
 
         private void SalaryRadioButton_CheckedChanged(object sender, EventArgs e)
         {
+            DisablePanels();
             using (var connection = dbConnectionWareHouse())
             {
 
@@ -201,6 +209,7 @@ namespace ZadDomLab3
 
         private void ClassTeacherRadioButton_CheckedChanged(object sender, EventArgs e)
         {
+            DisablePanels();
             using (var connection = dbConnectionWareHouse())
             {
 
@@ -223,6 +232,12 @@ namespace ZadDomLab3
 
 
             }
+        }
+
+        private void DisablePanels()
+        {
+            WorkerPanel.Enabled = false;
+            LoginsPanel.Enabled = false;
         }
     }
 }

@@ -46,8 +46,19 @@
             this.SurnameTextBox = new System.Windows.Forms.TextBox();
             this.RoleTextBox = new System.Windows.Forms.TextBox();
             this.PeselTextBox = new System.Windows.Forms.TextBox();
+            this.UpdateButton = new System.Windows.Forms.Button();
+            this.InsertButton = new System.Windows.Forms.Button();
+            this.SelectButton = new System.Windows.Forms.Button();
+            this.LoginsPanel = new System.Windows.Forms.Panel();
+            this.PeselPanel = new System.Windows.Forms.Label();
+            this.UserNameLabel = new System.Windows.Forms.Label();
+            this.PasswordLabel = new System.Windows.Forms.Label();
+            this.UserPeselTextBox = new System.Windows.Forms.TextBox();
+            this.LoginTextBox = new System.Windows.Forms.TextBox();
+            this.PasswordTextBox = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.GriedVieverDataBase)).BeginInit();
             this.WorkerPanel.SuspendLayout();
+            this.LoginsPanel.SuspendLayout();
             this.SuspendLayout();
             // 
             // GriedVieverDataBase
@@ -154,6 +165,9 @@
             // 
             // WorkerPanel
             // 
+            this.WorkerPanel.Controls.Add(this.SelectButton);
+            this.WorkerPanel.Controls.Add(this.InsertButton);
+            this.WorkerPanel.Controls.Add(this.UpdateButton);
             this.WorkerPanel.Controls.Add(this.PeselTextBox);
             this.WorkerPanel.Controls.Add(this.RoleTextBox);
             this.WorkerPanel.Controls.Add(this.SurnameTextBox);
@@ -162,9 +176,10 @@
             this.WorkerPanel.Controls.Add(this.PeselLabel);
             this.WorkerPanel.Controls.Add(this.SurnameLabel);
             this.WorkerPanel.Controls.Add(this.NameLabel);
-            this.WorkerPanel.Location = new System.Drawing.Point(801, 91);
+            this.WorkerPanel.Enabled = false;
+            this.WorkerPanel.Location = new System.Drawing.Point(797, 12);
             this.WorkerPanel.Name = "WorkerPanel";
-            this.WorkerPanel.Size = new System.Drawing.Size(253, 238);
+            this.WorkerPanel.Size = new System.Drawing.Size(253, 261);
             this.WorkerPanel.TabIndex = 9;
             // 
             // NameLabel
@@ -231,11 +246,101 @@
             this.PeselTextBox.Size = new System.Drawing.Size(100, 20);
             this.PeselTextBox.TabIndex = 7;
             // 
+            // UpdateButton
+            // 
+            this.UpdateButton.Location = new System.Drawing.Point(31, 177);
+            this.UpdateButton.Name = "UpdateButton";
+            this.UpdateButton.Size = new System.Drawing.Size(203, 23);
+            this.UpdateButton.TabIndex = 8;
+            this.UpdateButton.Text = "Aktualizuj Dane";
+            this.UpdateButton.UseVisualStyleBackColor = true;
+            // 
+            // InsertButton
+            // 
+            this.InsertButton.Location = new System.Drawing.Point(31, 206);
+            this.InsertButton.Name = "InsertButton";
+            this.InsertButton.Size = new System.Drawing.Size(203, 23);
+            this.InsertButton.TabIndex = 9;
+            this.InsertButton.Text = "Wprowadź Dane";
+            this.InsertButton.UseVisualStyleBackColor = true;
+            // 
+            // SelectButton
+            // 
+            this.SelectButton.Location = new System.Drawing.Point(31, 235);
+            this.SelectButton.Name = "SelectButton";
+            this.SelectButton.Size = new System.Drawing.Size(203, 23);
+            this.SelectButton.TabIndex = 10;
+            this.SelectButton.Text = "Wyszukaj Pracownika";
+            this.SelectButton.UseVisualStyleBackColor = true;
+            // 
+            // LoginsPanel
+            // 
+            this.LoginsPanel.Controls.Add(this.PasswordTextBox);
+            this.LoginsPanel.Controls.Add(this.LoginTextBox);
+            this.LoginsPanel.Controls.Add(this.UserPeselTextBox);
+            this.LoginsPanel.Controls.Add(this.PasswordLabel);
+            this.LoginsPanel.Controls.Add(this.UserNameLabel);
+            this.LoginsPanel.Controls.Add(this.PeselPanel);
+            this.LoginsPanel.Enabled = false;
+            this.LoginsPanel.Location = new System.Drawing.Point(797, 279);
+            this.LoginsPanel.Name = "LoginsPanel";
+            this.LoginsPanel.Size = new System.Drawing.Size(253, 221);
+            this.LoginsPanel.TabIndex = 10;
+            // 
+            // PeselPanel
+            // 
+            this.PeselPanel.Location = new System.Drawing.Point(28, 27);
+            this.PeselPanel.Name = "PeselPanel";
+            this.PeselPanel.Size = new System.Drawing.Size(100, 23);
+            this.PeselPanel.TabIndex = 11;
+            this.PeselPanel.Text = "Pesel";
+            this.PeselPanel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // UserNameLabel
+            // 
+            this.UserNameLabel.Location = new System.Drawing.Point(28, 71);
+            this.UserNameLabel.Name = "UserNameLabel";
+            this.UserNameLabel.Size = new System.Drawing.Size(100, 23);
+            this.UserNameLabel.TabIndex = 12;
+            this.UserNameLabel.Text = "Login";
+            this.UserNameLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // PasswordLabel
+            // 
+            this.PasswordLabel.Location = new System.Drawing.Point(28, 110);
+            this.PasswordLabel.Name = "PasswordLabel";
+            this.PasswordLabel.Size = new System.Drawing.Size(100, 23);
+            this.PasswordLabel.TabIndex = 13;
+            this.PasswordLabel.Text = "Hasło";
+            this.PasswordLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // UserPeselTextBox
+            // 
+            this.UserPeselTextBox.Location = new System.Drawing.Point(134, 27);
+            this.UserPeselTextBox.Name = "UserPeselTextBox";
+            this.UserPeselTextBox.Size = new System.Drawing.Size(100, 20);
+            this.UserPeselTextBox.TabIndex = 11;
+            // 
+            // LoginTextBox
+            // 
+            this.LoginTextBox.Location = new System.Drawing.Point(134, 74);
+            this.LoginTextBox.Name = "LoginTextBox";
+            this.LoginTextBox.Size = new System.Drawing.Size(100, 20);
+            this.LoginTextBox.TabIndex = 14;
+            // 
+            // PasswordTextBox
+            // 
+            this.PasswordTextBox.Location = new System.Drawing.Point(134, 113);
+            this.PasswordTextBox.Name = "PasswordTextBox";
+            this.PasswordTextBox.Size = new System.Drawing.Size(100, 20);
+            this.PasswordTextBox.TabIndex = 15;
+            // 
             // FormForHeadTeacher
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1128, 474);
+            this.ClientSize = new System.Drawing.Size(1128, 550);
+            this.Controls.Add(this.LoginsPanel);
             this.Controls.Add(this.WorkerPanel);
             this.Controls.Add(this.ClassTeacherRadioButton);
             this.Controls.Add(this.SalaryRadioButton);
@@ -251,6 +356,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.GriedVieverDataBase)).EndInit();
             this.WorkerPanel.ResumeLayout(false);
             this.WorkerPanel.PerformLayout();
+            this.LoginsPanel.ResumeLayout(false);
+            this.LoginsPanel.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -276,5 +383,15 @@
         private System.Windows.Forms.TextBox SurnameTextBox;
         private System.Windows.Forms.TextBox NameTextBox;
         private System.Windows.Forms.Label RoleLabel;
+        private System.Windows.Forms.Button SelectButton;
+        private System.Windows.Forms.Button InsertButton;
+        private System.Windows.Forms.Button UpdateButton;
+        private System.Windows.Forms.Panel LoginsPanel;
+        private System.Windows.Forms.TextBox PasswordTextBox;
+        private System.Windows.Forms.TextBox LoginTextBox;
+        private System.Windows.Forms.TextBox UserPeselTextBox;
+        private System.Windows.Forms.Label PasswordLabel;
+        private System.Windows.Forms.Label UserNameLabel;
+        private System.Windows.Forms.Label PeselPanel;
     }
 }
