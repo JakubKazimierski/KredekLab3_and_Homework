@@ -25,30 +25,7 @@ namespace ZadDomLab3
             
         } 
 
-        public void GetDataFromTable()
-        {
-
-            int NumberOfWorker = 0;
-            int NumberOfPesel = 0;
-            using (var connection = dbConnectionWareHouse())
-            {
-                connection.Open();
-
-                
-
-                using (SqlDataAdapter adapter = new SqlDataAdapter("Select * From LogIns INNER JOIN Worker ON Worker.Pesel = LogIns.UserPesel   Where LogIns.UserName ='"+GetUserName()+"'AND LogIns.UserPassword='"+GetPassword()+"'", connection))
-                {
-                    DataTable table = new DataTable();
-                    DataSet setOfDB = new DataSet();
-
-                    adapter.Fill(table);
-                    GriedVieverDataBase.DataSource = table;
-                    
-
-                }
-
-            }
-        }
+ 
 
         public void SetUserName(string name)
         {
@@ -65,6 +42,187 @@ namespace ZadDomLab3
         public string GetPassword()
         {
             return password;
+        }
+
+        private void WorkerRadioButton_CheckedChanged(object sender, EventArgs e)
+        {
+            using (var connection = dbConnectionWareHouse())
+            {
+
+                this.GriedVieverDataBase.Controls.Clear();
+
+                connection.Open();
+
+                    using (SqlDataAdapter adapter = new SqlDataAdapter("Select * From Worker", connection))
+                    {
+                        DataTable table = new DataTable();
+
+
+                        adapter.Fill(table);
+                        GriedVieverDataBase.DataSource = table;
+                      
+
+                    }
+                    connection.Close();
+      
+            }
+
+        }
+
+        private void StudentsRadioButton_CheckedChanged(object sender, EventArgs e)
+        {
+            using (var connection = dbConnectionWareHouse())
+            {
+
+
+                this.GriedVieverDataBase.Controls.Clear();
+
+                connection.Open();
+
+                    using (SqlDataAdapter adapter = new SqlDataAdapter("Select * From  Student ", connection))
+                    {
+                        DataTable table = new DataTable();
+
+
+                        adapter.Fill(table);
+                        GriedVieverDataBase.DataSource = table;
+                        
+
+                    }
+                    connection.Close();
+                
+
+            }
+        }
+
+        private void GradesRadioButton_CheckedChanged(object sender, EventArgs e)
+        {
+            using (var connection = dbConnectionWareHouse())
+            {
+
+
+                this.GriedVieverDataBase.Controls.Clear();
+
+                connection.Open();
+
+                using (SqlDataAdapter adapter = new SqlDataAdapter("Select * From  Grades ", connection))
+                {
+                    DataTable table = new DataTable();
+
+
+                    adapter.Fill(table);
+                    GriedVieverDataBase.DataSource = table;
+
+
+                }
+                connection.Close();
+
+
+            }
+        }
+
+        private void RoleRadioButton_CheckedChanged(object sender, EventArgs e)
+        {
+            using (var connection = dbConnectionWareHouse())
+            {
+
+
+                this.GriedVieverDataBase.Controls.Clear();
+
+                connection.Open();
+
+                using (SqlDataAdapter adapter = new SqlDataAdapter("Select * From  Role ", connection))
+                {
+                    DataTable table = new DataTable();
+
+
+                    adapter.Fill(table);
+                    GriedVieverDataBase.DataSource = table;
+
+
+                }
+                connection.Close();
+
+
+            }
+        }
+
+        private void LogInsRadioButton_CheckedChanged(object sender, EventArgs e)
+        {
+            using (var connection = dbConnectionWareHouse())
+            {
+
+
+                this.GriedVieverDataBase.Controls.Clear();
+
+                connection.Open();
+
+                using (SqlDataAdapter adapter = new SqlDataAdapter("Select * From  LogIns ", connection))
+                {
+                    DataTable table = new DataTable();
+
+
+                    adapter.Fill(table);
+                    GriedVieverDataBase.DataSource = table;
+
+
+                }
+                connection.Close();
+
+
+            }
+        }
+
+        private void SalaryRadioButton_CheckedChanged(object sender, EventArgs e)
+        {
+            using (var connection = dbConnectionWareHouse())
+            {
+
+
+                this.GriedVieverDataBase.Controls.Clear();
+
+                connection.Open();
+
+                using (SqlDataAdapter adapter = new SqlDataAdapter("Select * From  Salary ", connection))
+                {
+                    DataTable table = new DataTable();
+
+
+                    adapter.Fill(table);
+                    GriedVieverDataBase.DataSource = table;
+
+
+                }
+                connection.Close();
+
+
+            }
+        }
+
+        private void ClassTeacherRadioButton_CheckedChanged(object sender, EventArgs e)
+        {
+            using (var connection = dbConnectionWareHouse())
+            {
+
+
+                this.GriedVieverDataBase.Controls.Clear();
+
+                connection.Open();
+
+                using (SqlDataAdapter adapter = new SqlDataAdapter("Select * From  ClassTeacher ", connection))
+                {
+                    DataTable table = new DataTable();
+
+
+                    adapter.Fill(table);
+                    GriedVieverDataBase.DataSource = table;
+
+
+                }
+                connection.Close();
+
+
+            }
         }
     }
 }

@@ -46,12 +46,12 @@
             this.GriedVieverDataBase.Location = new System.Drawing.Point(12, 12);
             this.GriedVieverDataBase.Name = "GriedVieverDataBase";
             this.GriedVieverDataBase.RowHeadersWidth = 46;
-            this.GriedVieverDataBase.Size = new System.Drawing.Size(490, 450);
+            this.GriedVieverDataBase.Size = new System.Drawing.Size(503, 450);
             this.GriedVieverDataBase.TabIndex = 0;
             // 
             // HeadTeacherLabelTableSelect
             // 
-            this.HeadTeacherLabelTableSelect.Location = new System.Drawing.Point(508, 12);
+            this.HeadTeacherLabelTableSelect.Location = new System.Drawing.Point(541, 12);
             this.HeadTeacherLabelTableSelect.Name = "HeadTeacherLabelTableSelect";
             this.HeadTeacherLabelTableSelect.Size = new System.Drawing.Size(282, 50);
             this.HeadTeacherLabelTableSelect.TabIndex = 1;
@@ -68,6 +68,7 @@
             this.WorkerRadioButton.TabStop = true;
             this.WorkerRadioButton.Text = "Pracownicy";
             this.WorkerRadioButton.UseVisualStyleBackColor = true;
+            this.WorkerRadioButton.CheckedChanged += new System.EventHandler(this.WorkerRadioButton_CheckedChanged);
             // 
             // StudentsRadioButton
             // 
@@ -79,6 +80,7 @@
             this.StudentsRadioButton.TabStop = true;
             this.StudentsRadioButton.Text = "Uczniowie";
             this.StudentsRadioButton.UseVisualStyleBackColor = true;
+            this.StudentsRadioButton.CheckedChanged += new System.EventHandler(this.StudentsRadioButton_CheckedChanged);
             // 
             // GradesRadioButton
             // 
@@ -90,6 +92,7 @@
             this.GradesRadioButton.TabStop = true;
             this.GradesRadioButton.Text = "Oceny Uczniów";
             this.GradesRadioButton.UseVisualStyleBackColor = true;
+            this.GradesRadioButton.CheckedChanged += new System.EventHandler(this.GradesRadioButton_CheckedChanged);
             // 
             // RoleRadioButton
             // 
@@ -101,6 +104,7 @@
             this.RoleRadioButton.TabStop = true;
             this.RoleRadioButton.Text = "Rodzaje Pracowników";
             this.RoleRadioButton.UseVisualStyleBackColor = true;
+            this.RoleRadioButton.CheckedChanged += new System.EventHandler(this.RoleRadioButton_CheckedChanged);
             // 
             // LogInsRadioButton
             // 
@@ -112,6 +116,7 @@
             this.LogInsRadioButton.TabStop = true;
             this.LogInsRadioButton.Text = "Loginy i Hasła";
             this.LogInsRadioButton.UseVisualStyleBackColor = true;
+            this.LogInsRadioButton.CheckedChanged += new System.EventHandler(this.LogInsRadioButton_CheckedChanged);
             // 
             // SalaryRadioButton
             // 
@@ -123,6 +128,7 @@
             this.SalaryRadioButton.TabStop = true;
             this.SalaryRadioButton.Text = "Wypłaty";
             this.SalaryRadioButton.UseVisualStyleBackColor = true;
+            this.SalaryRadioButton.CheckedChanged += new System.EventHandler(this.SalaryRadioButton_CheckedChanged);
             // 
             // ClassTeacherRadioButton
             // 
@@ -134,6 +140,7 @@
             this.ClassTeacherRadioButton.TabStop = true;
             this.ClassTeacherRadioButton.Text = "Wychowawcy i klasy";
             this.ClassTeacherRadioButton.UseVisualStyleBackColor = true;
+            this.ClassTeacherRadioButton.CheckedChanged += new System.EventHandler(this.ClassTeacherRadioButton_CheckedChanged);
             // 
             // FormForHeadTeacher
             // 

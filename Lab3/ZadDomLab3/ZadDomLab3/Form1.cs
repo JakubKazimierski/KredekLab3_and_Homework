@@ -57,7 +57,7 @@ namespace ZadDomLab3
                         MessageBox.Show("Witaj Dyrektorze");
                         formForHeadTeacher.SetUserName(TextBoxUserName.Text);
                         formForHeadTeacher.SetPassword(TextBoxUserPassword.Text);
-                        formForHeadTeacher.GetDataFromTable();
+                        
                         formForHeadTeacher.Show();
                     
                     }
