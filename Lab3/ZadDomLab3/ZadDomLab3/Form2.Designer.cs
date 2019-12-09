@@ -56,6 +56,9 @@
             this.UserPeselTextBox = new System.Windows.Forms.TextBox();
             this.LoginTextBox = new System.Windows.Forms.TextBox();
             this.PasswordTextBox = new System.Windows.Forms.TextBox();
+            this.LoginsUpdateButton = new System.Windows.Forms.Button();
+            this.LoginsInsertButton = new System.Windows.Forms.Button();
+            this.LoginsDeleteButton = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.GriedVieverDataBase)).BeginInit();
             this.WorkerPanel.SuspendLayout();
             this.LoginsPanel.SuspendLayout();
@@ -275,6 +278,9 @@
             // 
             // LoginsPanel
             // 
+            this.LoginsPanel.Controls.Add(this.LoginsDeleteButton);
+            this.LoginsPanel.Controls.Add(this.LoginsInsertButton);
+            this.LoginsPanel.Controls.Add(this.LoginsUpdateButton);
             this.LoginsPanel.Controls.Add(this.PasswordTextBox);
             this.LoginsPanel.Controls.Add(this.LoginTextBox);
             this.LoginsPanel.Controls.Add(this.UserPeselTextBox);
@@ -335,6 +341,33 @@
             this.PasswordTextBox.Size = new System.Drawing.Size(100, 20);
             this.PasswordTextBox.TabIndex = 15;
             // 
+            // LoginsUpdateButton
+            // 
+            this.LoginsUpdateButton.Location = new System.Drawing.Point(31, 139);
+            this.LoginsUpdateButton.Name = "LoginsUpdateButton";
+            this.LoginsUpdateButton.Size = new System.Drawing.Size(203, 23);
+            this.LoginsUpdateButton.TabIndex = 11;
+            this.LoginsUpdateButton.Text = "Aktualizuj Dane";
+            this.LoginsUpdateButton.UseVisualStyleBackColor = true;
+            // 
+            // LoginsInsertButton
+            // 
+            this.LoginsInsertButton.Location = new System.Drawing.Point(31, 168);
+            this.LoginsInsertButton.Name = "LoginsInsertButton";
+            this.LoginsInsertButton.Size = new System.Drawing.Size(203, 23);
+            this.LoginsInsertButton.TabIndex = 16;
+            this.LoginsInsertButton.Text = "Wprowadź Dane";
+            this.LoginsInsertButton.UseVisualStyleBackColor = true;
+            // 
+            // LoginsDeleteButton
+            // 
+            this.LoginsDeleteButton.Location = new System.Drawing.Point(31, 195);
+            this.LoginsDeleteButton.Name = "LoginsDeleteButton";
+            this.LoginsDeleteButton.Size = new System.Drawing.Size(203, 23);
+            this.LoginsDeleteButton.TabIndex = 17;
+            this.LoginsDeleteButton.Text = "Usuń Dane";
+            this.LoginsDeleteButton.UseVisualStyleBackColor = true;
+            // 
             // FormForHeadTeacher
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -393,5 +426,8 @@
         private System.Windows.Forms.Label PasswordLabel;
         private System.Windows.Forms.Label UserNameLabel;
         private System.Windows.Forms.Label PeselPanel;
+        private System.Windows.Forms.Button LoginsDeleteButton;
+        private System.Windows.Forms.Button LoginsInsertButton;
+        private System.Windows.Forms.Button LoginsUpdateButton;
     }
 }
