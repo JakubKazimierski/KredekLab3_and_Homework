@@ -14,24 +14,29 @@ namespace ZadDomLab3
 {
     public partial class FormForStudents : Form
     {
-
+        //variables
         private string username;
         private string password;
 
+        //connector to data base
         private readonly Func<SqlConnection> dbConnectionWareHouse = () => new SqlConnection(ConfigurationManager.ConnectionStrings["Lab3"].ConnectionString);
 
+        //constructor
         public FormForStudents()
         {
             InitializeComponent();
         }
 
+        /// <summary>
+        /// Method of selecting specific data from data base
+        /// </summary>
         public void GetDataFromTable()
         {
             string Grade = "";
            
             using (var connection = dbConnectionWareHouse())
             {
-                connection.Open();
+                connection.Open();//opening connection to data base
 
                 SqlCommand comand = new SqlCommand("Select * From LogIns INNER JOIN Student ON Student.Pesel = LogIns.UserPesel INNER JOIN Grades ON Student.StudentId = Grades.StudentId  Where LogIns.UserName = '" + GetUserName() + "'AND LogIns.UserPassword = '" + GetPassword() +"'", connection);
                 SqlDataReader dataReader = comand.ExecuteReader();
@@ -42,10 +47,16 @@ namespace ZadDomLab3
                     Grade = dataReader.GetValue(11).ToString();
                    
                 }
-                connection.Close();
+                connection.Close();//close connection
                 GradeLabelGrade.Text = Grade;
             }
         }
+
+        #region VariablesMethod
+        /// <summary>
+        /// Methods to get and set variables which are private
+        /// </summary>
+        /// <param name="name"></param>
         public void SetUserName(string name)
         {
             username = name;
@@ -62,5 +73,6 @@ namespace ZadDomLab3
         {
             return password;
         }
+        #endregion
     }
 }
