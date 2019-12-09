@@ -38,7 +38,16 @@
             this.SalaryRadioButton = new System.Windows.Forms.RadioButton();
             this.ClassTeacherRadioButton = new System.Windows.Forms.RadioButton();
             this.WorkerPanel = new System.Windows.Forms.Panel();
+            this.NameLabel = new System.Windows.Forms.Label();
+            this.SurnameLabel = new System.Windows.Forms.Label();
+            this.PeselLabel = new System.Windows.Forms.Label();
+            this.RoleLabel = new System.Windows.Forms.Label();
+            this.NameTextBox = new System.Windows.Forms.TextBox();
+            this.SurnameTextBox = new System.Windows.Forms.TextBox();
+            this.RoleTextBox = new System.Windows.Forms.TextBox();
+            this.PeselTextBox = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.GriedVieverDataBase)).BeginInit();
+            this.WorkerPanel.SuspendLayout();
             this.SuspendLayout();
             // 
             // GriedVieverDataBase
@@ -145,10 +154,82 @@
             // 
             // WorkerPanel
             // 
+            this.WorkerPanel.Controls.Add(this.PeselTextBox);
+            this.WorkerPanel.Controls.Add(this.RoleTextBox);
+            this.WorkerPanel.Controls.Add(this.SurnameTextBox);
+            this.WorkerPanel.Controls.Add(this.NameTextBox);
+            this.WorkerPanel.Controls.Add(this.RoleLabel);
+            this.WorkerPanel.Controls.Add(this.PeselLabel);
+            this.WorkerPanel.Controls.Add(this.SurnameLabel);
+            this.WorkerPanel.Controls.Add(this.NameLabel);
             this.WorkerPanel.Location = new System.Drawing.Point(801, 91);
             this.WorkerPanel.Name = "WorkerPanel";
             this.WorkerPanel.Size = new System.Drawing.Size(253, 238);
             this.WorkerPanel.TabIndex = 9;
+            // 
+            // NameLabel
+            // 
+            this.NameLabel.Location = new System.Drawing.Point(28, 25);
+            this.NameLabel.Name = "NameLabel";
+            this.NameLabel.Size = new System.Drawing.Size(100, 23);
+            this.NameLabel.TabIndex = 0;
+            this.NameLabel.Text = "Imię";
+            this.NameLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // SurnameLabel
+            // 
+            this.SurnameLabel.Location = new System.Drawing.Point(28, 62);
+            this.SurnameLabel.Name = "SurnameLabel";
+            this.SurnameLabel.Size = new System.Drawing.Size(100, 23);
+            this.SurnameLabel.TabIndex = 1;
+            this.SurnameLabel.Text = "Nazwisko";
+            this.SurnameLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // PeselLabel
+            // 
+            this.PeselLabel.Location = new System.Drawing.Point(28, 103);
+            this.PeselLabel.Name = "PeselLabel";
+            this.PeselLabel.Size = new System.Drawing.Size(100, 23);
+            this.PeselLabel.TabIndex = 2;
+            this.PeselLabel.Text = "Pesel";
+            this.PeselLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // RoleLabel
+            // 
+            this.RoleLabel.Location = new System.Drawing.Point(28, 137);
+            this.RoleLabel.Name = "RoleLabel";
+            this.RoleLabel.Size = new System.Drawing.Size(100, 23);
+            this.RoleLabel.TabIndex = 3;
+            this.RoleLabel.Text = "Rola";
+            this.RoleLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // NameTextBox
+            // 
+            this.NameTextBox.Location = new System.Drawing.Point(134, 28);
+            this.NameTextBox.Name = "NameTextBox";
+            this.NameTextBox.Size = new System.Drawing.Size(100, 20);
+            this.NameTextBox.TabIndex = 4;
+            // 
+            // SurnameTextBox
+            // 
+            this.SurnameTextBox.Location = new System.Drawing.Point(134, 65);
+            this.SurnameTextBox.Name = "SurnameTextBox";
+            this.SurnameTextBox.Size = new System.Drawing.Size(100, 20);
+            this.SurnameTextBox.TabIndex = 5;
+            // 
+            // RoleTextBox
+            // 
+            this.RoleTextBox.Location = new System.Drawing.Point(134, 140);
+            this.RoleTextBox.Name = "RoleTextBox";
+            this.RoleTextBox.Size = new System.Drawing.Size(100, 20);
+            this.RoleTextBox.TabIndex = 6;
+            // 
+            // PeselTextBox
+            // 
+            this.PeselTextBox.Location = new System.Drawing.Point(134, 103);
+            this.PeselTextBox.Name = "PeselTextBox";
+            this.PeselTextBox.Size = new System.Drawing.Size(100, 20);
+            this.PeselTextBox.TabIndex = 7;
             // 
             // FormForHeadTeacher
             // 
@@ -168,6 +249,8 @@
             this.Name = "FormForHeadTeacher";
             this.Text = "SchoolPlatform";
             ((System.ComponentModel.ISupportInitialize)(this.GriedVieverDataBase)).EndInit();
+            this.WorkerPanel.ResumeLayout(false);
+            this.WorkerPanel.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -185,5 +268,13 @@
         private System.Windows.Forms.RadioButton SalaryRadioButton;
         private System.Windows.Forms.RadioButton ClassTeacherRadioButton;
         private System.Windows.Forms.Panel WorkerPanel;
+        private System.Windows.Forms.Label PeselLabel;
+        private System.Windows.Forms.Label SurnameLabel;
+        private System.Windows.Forms.Label NameLabel;
+        private System.Windows.Forms.TextBox PeselTextBox;
+        private System.Windows.Forms.TextBox RoleTextBox;
+        private System.Windows.Forms.TextBox SurnameTextBox;
+        private System.Windows.Forms.TextBox NameTextBox;
+        private System.Windows.Forms.Label RoleLabel;
     }
 }
